@@ -24,6 +24,9 @@ a:hover {
 }
 
 body {
+  background-image: url("https://unsplash.com/photos/evlkOfkQ5rE");
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
   display: flex;
   place-items: center;

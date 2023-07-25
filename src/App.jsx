@@ -6,8 +6,10 @@ function App() {
   const [contacts, setContacts] = useState(contactsJSON.slice(0,5))
   console.log(contacts, setContacts)
   return (
-    <div className="App">
+    <div className="App" id="screen">
       <h1>LAB | React IronContacts</h1>
+      <div id='buttons'>
+        <div>
       <button onClick={() => {
         let newContact = contactsJSON[Math.round(Math.random() * (contactsJSON.length))]
         
@@ -16,7 +18,8 @@ function App() {
         }
         setContacts(previousContacts => [...previousContacts, newContact])
         } } >Create random contact</button>
-
+        </div>
+        <div>
       <button onClick={() => {
         let sortPopularity = [...contacts]
 
@@ -24,7 +27,9 @@ function App() {
   
         setContacts(sortPopularity)
         } }>Sort by Popularity</button>
+        </div>
 
+        <div>
       <button onClick={() => {
         let sortNames = [...contacts]
 
@@ -33,7 +38,8 @@ function App() {
   
         setContacts(sortNames)
         } }>Sort by Name</button>
-      
+        </div>
+      </div>
       <table>
         <thead>
           <tr>
